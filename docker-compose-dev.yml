@@ -10,7 +10,7 @@ services:
     volumes:
       - './services/users:/usr/src/app'
     ports:
-      - 5000:5000
+      - 5001:5000
     environment:
       - FLASK_DEBUG=1
       - APP_SETTINGS=project.config.DevelopmentConfig
@@ -27,7 +27,7 @@ services:
       context: ./services/users/project/db
       dockerfile: Dockerfile
     ports:
-      - 5432:5432
+      - 5435:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
